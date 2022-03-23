@@ -10,9 +10,33 @@ let canvasPolice = document.createElement("canvas")
 canvasPolice.setAttribute("id", "canvasPolice")
 document.getElementById("table1").insertAdjacentElement("beforebegin", canvasPolice)
 
-let canvasHomicide = document.createElement("canvas")
-canvasHomicide.setAttribute("id", "canvasHomicide")
-document.getElementById("table2").insertAdjacentElement("beforebegin", canvasHomicide)
+let canvasHomicide = document.createElement("canvas");
+canvasHomicide.setAttribute("id", "canvasHomicide");
+document.getElementById("table2").insertAdjacentElement("beforebegin", canvasHomicide);
+
+const myChart = new Chart(canvasHomicide, {
+  type: 'bar',
+  data: {
+    labels: [
+    'first',
+    'second',
+  ],
+  dataset: [{
+      label: 'My First dataset',
+      color: 'green',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      
+      barPercentage: 0.5,
+      barThickness: 6,
+      maxBarThickness: 8,
+      minBarLength: 2,
+      data: [10, 20, 30, 40, 50, 60, 70]
+    }]
+
+  },
+  
+});
 
 
 
