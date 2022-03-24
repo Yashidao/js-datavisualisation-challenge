@@ -29,10 +29,9 @@ for (let i = 1; i < table.rows.length; i++) {
     values2.push(table.rows[i].cells[3].innerHTML);
     
 }
-
-// console.log(country);
-// console.log(values1);
-// console.log(values2);
+// supprimer les symboles inutilisées 
+let elem = country[7].slice(0, 11) + ' ' + country[7].slice(country[7].indexOf('W'));
+country[7] = elem;
 
 let myChart = new Chart(canvasHomicide, {
      data: {
