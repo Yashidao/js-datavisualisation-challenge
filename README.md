@@ -8,4 +8,4 @@ Elena, Pierre, Kevin
 
 ### Lien
 
-<https://yashidao.github.io/js-datavisualisation-challenge/>
+<https://yashidao.github.io/js-datavisualisation-challenge/index.html>
