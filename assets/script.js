@@ -15,59 +15,6 @@ let canvasHomicide = document.createElement("canvas")
 canvasHomicide.setAttribute("id", "canvasHomicide")
 document.getElementById("table2").insertAdjacentElement("beforebegin", canvasHomicide)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Mise en place de th supplémentaire pour la facilité du code
 let nbthousand = document.getElementsByTagName("th")[2]
 nbthousand.setAttribute("colspan", 3)
