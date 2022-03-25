@@ -13,6 +13,7 @@ canvasPolice.setAttribute("id", "canvasPolice");
 document
   .getElementById("table1")
   .insertAdjacentElement("beforebegin", canvasPolice);
+canvasPolice.height = 500
 
 let canvasHomicide = document.createElement("canvas");
 canvasHomicide.setAttribute("id", "canvasHomicide");
