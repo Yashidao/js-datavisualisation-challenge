@@ -252,3 +252,52 @@ let graphPolice = new Chart(canvasPolice, {
         }
     }
 })
+ 
+const table2 = document.getElementById('table2');
+
+let country = [];
+let values2 = [];
+let values1 = [];
+
+// Itération sur les cellules
+for (let i = 1; i < table2.rows.length; i++) {
+    country.push(table2.rows[i].cells[1].innerHTML);
+    values1.push(table2.rows[i].cells[2].innerHTML);
+    values2.push(table2.rows[i].cells[3].innerHTML);
+    
+}
+// supprimer les symboles inutilisées 
+let elem = country[7].slice(0, 11) + ' ' + country[7].slice(country[7].indexOf('W'));
+country[7] = elem;
+
+let myChart = new Chart(canvasHomicide, {
+     data: {
+      labels: country, 
+      datasets: [{
+        type: 'bar',
+        label: '2007-2009', 
+        data: values1, 
+        backgroundColor: 'rgba(255, 99, 132, 0.7)',
+        borderColor: [ 
+          'rgba(255,99,132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)'
+        ],
+        borderWidth: 2 // Définir la largeur du trait de section
+      }, {
+        type: 'bar',
+        label: '2010-2012', 
+        data: values2, 
+        backgroundColor: 'rgba(255, 206, 86, 0.7)',
+        borderColor: [ 
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)'
+        ],
+        borderWidth: 1 
+      }]
+    },
+    
+  });
+
